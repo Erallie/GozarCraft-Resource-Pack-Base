@@ -1,0 +1,79 @@
+[
+    {
+        "title": "Adventure Awaits",
+        "author": "Erika Gozar",
+        "duration": 129,
+        "disc-namespace": "music_disc.adventure_awaits",
+        "model-data": 503,
+        "creeper-drop": true,
+        "lores": [],
+        "loot-tables": [],
+        "fragment-loot-tables": []
+    },
+    {
+        "title": "An Answered Prayer",
+        "author": "Erika Gozar",
+        "duration": 135,
+        "disc-namespace": "music_disc.an_answered_prayer",
+        "model-data": 500,
+        "creeper-drop": true,
+        "lores": [],
+        "loot-tables": [],
+        "fragment-loot-tables": []
+    },
+    {
+        "title": "Pandemonium",
+        "author": "Erika Gozar",
+        "duration": 192,
+        "disc-namespace": "music_disc.pandemonium",
+        "model-data": 506,
+        "creeper-drop": true,
+        "lores": [],
+        "loot-tables": [],
+        "fragment-loot-tables": []
+    },
+    {
+        "title": "The Archmage",
+        "author": "Erika Gozar",
+        "disc-namespace": "music_disc.the_archmage",
+        "duration": 154,
+        "model-data": 504,
+        "creeper-drop": true,
+        "lores": [],
+        "loot-tables": [],
+        "fragment-loot-tables": []
+    },
+    {
+        "title": "The Fish Won't Die",
+        "author": "Erika Gozar",
+        "disc-namespace": "music_disc.the_fish_wont_die",
+        "duration": 30,
+        "model-data": 501,
+        "creeper-drop": true,
+        "lores": [],
+        "loot-tables": [],
+        "fragment-loot-tables": []
+    },
+    {
+        "title": "The Mystery of the Nexus",
+        "author": "Erika Gozar",
+        "disc-namespace": "music_disc.the_mystery_of_the_nexus",
+        "duration": 38,
+        "model-data": 505,
+        "creeper-drop": true,
+        "lores": [],
+        "loot-tables": [],
+        "fragment-loot-tables": []
+    },
+    {
+        "title": "The Rise of Tiamat",
+        "author": "Erika Gozar",
+        "disc-namespace": "music_disc.the_rise_of_tiamat",
+        "duration": 35,
+        "model-data": 502,
+        "creeper-drop": true,
+        "lores": [],
+        "loot-tables": [],
+        "fragment-loot-tables": []
+    }
+]

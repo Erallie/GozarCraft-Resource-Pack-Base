@@ -1,0 +1,27 @@
+How to Add Custom Discs
+
+
+In the Resource Pack:
+
+1. Put the .ogg sound file in assets/minecraft/sounds/records
+
+2. Add the sound to the sounds.json file in assets/minecraft
+
+3. Add a custom texture .png in assets/moremusic/textures/item
+
+4. Add override texture in assets/minecraft/models/item/music_disc_11.json
+
+5. Add model .json in assets/moremusic/models/item
+
+
+In the Data Pack:
+
+1. Add give function .mcfunction in data/give/functions/moremusic
+
+2. List give function in data/give/tags/functions/moremusic/all.json
+
+3. Add jukebox function .mcfunction in data/moremusic/functions/music_disc/custom
+
+4. Edit notated sections in file at data/moremusic/functions/main_tick.mcfunction
+
+5. Edit loot table entry in data/moremusic/loot_tables/custom_music_discs.json

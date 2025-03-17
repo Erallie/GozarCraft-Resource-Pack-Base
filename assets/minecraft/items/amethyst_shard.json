@@ -1,0 +1,19 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/amethyst_shard"
+        },
+        "entries": [
+            {
+                "threshold": 503,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/nexus/artifacts/shard_of_obsidian"
+                }
+            }
+        ]
+    }
+}

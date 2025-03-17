@@ -1,0 +1,19 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/fermented_spider_eye"
+        },
+        "entries": [
+            {
+                "threshold": 500,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/nexus/weepa_heart"
+                }
+            }
+        ]
+    }
+}

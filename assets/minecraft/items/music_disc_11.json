@@ -1,0 +1,61 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/music_disc_11"
+        },
+        "entries": [
+            {
+                "threshold": 500,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/records/music_disc_an_answered_prayer"
+                }
+            },
+            {
+                "threshold": 501,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/records/music_disc_the_fish_wont_die"
+                }
+            },
+            {
+                "threshold": 502,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/records/music_disc_the_rise_of_tiamat"
+                }
+            },
+            {
+                "threshold": 503,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/records/music_disc_adventure_awaits"
+                }
+            },
+            {
+                "threshold": 504,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/records/music_disc_the_archmage"
+                }
+            },
+            {
+                "threshold": 505,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/records/music_disc_the_mystery_of_the_nexus"
+                }
+            },
+            {
+                "threshold": 506,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/records/music_disc_pandemonium"
+                }
+            }
+        ]
+    }
+}

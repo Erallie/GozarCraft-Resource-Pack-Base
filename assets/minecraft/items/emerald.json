@@ -1,0 +1,61 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/emerald"
+        },
+        "entries": [
+            {
+                "threshold": 51,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/flor/red_flor"
+                }
+            },
+            {
+                "threshold": 52,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/flor/orange_flor"
+                }
+            },
+            {
+                "threshold": 53,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/flor/yellow_flor"
+                }
+            },
+            {
+                "threshold": 54,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/flor/green_flor"
+                }
+            },
+            {
+                "threshold": 55,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/flor/blue_flor"
+                }
+            },
+            {
+                "threshold": 56,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/flor/purple_flor"
+                }
+            },
+            {
+                "threshold": 57,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/flor/pink_flor"
+                }
+            }
+        ]
+    }
+}

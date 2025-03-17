@@ -1,0 +1,19 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/rabbit_foot"
+        },
+        "entries": [
+            {
+                "threshold": 500,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/nexus/baby_gorgon_rattle"
+                }
+            }
+        ]
+    }
+}

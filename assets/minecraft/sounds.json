@@ -1,0 +1,295 @@
+{
+    "ambient.pandemonium.additions": {
+        "sounds": [
+            {
+                "name": "gozarcraft:ambient/pandemonium/pandemonium_ambient_additions_1",
+                "volume": 0.15000000596046448
+            },
+            {
+                "name": "gozarcraft:ambient/pandemonium/pandemonium_ambient_additions_2",
+                "volume": 0.15000000596046448
+            },
+            {
+                "name": "gozarcraft:ambient/pandemonium/pandemonium_ambient_additions_3",
+                "volume": 0.15000000596046448
+            },
+            {
+                "name": "gozarcraft:ambient/pandemonium/pandemonium_ambient_additions_4",
+                "volume": 0.15000000596046448
+            }
+        ],
+        "subtitle": "Ethereal voice sings"
+    },
+    "ambient.pandemonium.loop": {
+        "sounds": [
+            {
+                "name": "gozarcraft:ambient/pandemonium/pandemonium_ambient_loop",
+                "volume": 0.5
+            }
+        ],
+        "subtitle": "Wind droning"
+    },
+    "entity.gorgon.ambient": {
+        "sounds": [
+            {
+                "name": "gozarcraft:mob/gorgon/gorgon_rattle_1",
+                "volume": 0.5
+            },
+            {
+                "name": "gozarcraft:mob/gorgon/gorgon_rattle_2",
+                "volume": 0.5
+            }
+        ],
+        "subtitle": "Gorgon rattles"
+    },
+    "entity.gorgon.attack": {
+        "sounds": [
+            {
+                "name": "gozarcraft:mob/gorgon/gorgon_attack_1",
+                "volume": 0.6000000238418579
+            },
+            {
+                "name": "gozarcraft:mob/gorgon/gorgon_attack_2",
+                "volume": 0.6000000238418579
+            },
+            {
+                "name": "gozarcraft:mob/gorgon/gorgon_attack_3",
+                "volume": 0.6000000238418579
+            }
+        ],
+        "subtitle": "Gorgon bites"
+    },
+    "entity.gorgon.death": {
+        "sounds": [
+            {
+                "name": "gozarcraft:mob/gorgon/gorgon_death_1",
+                "volume": 0.5
+            },
+            {
+                "name": "gozarcraft:mob/gorgon/gorgon_death_2",
+                "volume": 0.5
+            },
+            {
+                "name": "gozarcraft:mob/gorgon/gorgon_death_3",
+                "volume": 0.5
+            },
+            {
+                "name": "gozarcraft:mob/gorgon/gorgon_death_4",
+                "volume": 0.5
+            }
+        ],
+        "subtitle": "Baby gorgon dies"
+    },
+    "entity.gorgon.hurt": {
+        "sounds": [
+            {
+                "name": "gozarcraft:mob/gorgon/gorgon_hurt_1",
+                "volume": 0.6000000238418579
+            },
+            {
+                "name": "gozarcraft:mob/gorgon/gorgon_hurt_2",
+                "volume": 0.6000000238418579
+            },
+            {
+                "name": "gozarcraft:mob/gorgon/gorgon_hurt_3",
+                "volume": 0.6000000238418579
+            }
+        ],
+        "subtitle": "Gorgon hurts"
+    },
+    "entity.gorgon.step": {
+        "sounds": [
+            "gozarcraft:mob/gorgon/gorgon_slither"
+        ],
+        "subtitle": "Footsteps"
+    },
+    "entity.weepa.ambient": {
+        "sounds": [
+            {
+                "name": "gozarcraft:mob/weepa/weepa_ambient_1",
+                "volume": 0.6000000238418579
+            },
+            {
+                "name": "gozarcraft:mob/weepa/weepa_ambient_2",
+                "volume": 0.6000000238418579
+            },
+            {
+                "name": "gozarcraft:mob/weepa/weepa_ambient_3",
+                "volume": 0.6000000238418579
+            },
+            {
+                "name": "gozarcraft:mob/weepa/weepa_ambient_4",
+                "volume": 0.6000000238418579
+            }
+        ],
+        "subtitle": "Weepa grumbles"
+    },
+    "entity.weepa.angry": {
+        "sounds": [
+            {
+                "name": "gozarcraft:mob/weepa/weepa_angry_1",
+                "volume": 0.699999988079071
+            },
+            {
+                "name": "gozarcraft:mob/weepa/weepa_angry_2",
+                "volume": 0.699999988079071
+            },
+            {
+                "name": "gozarcraft:mob/weepa/weepa_angry_3",
+                "volume": 0.699999988079071
+            }
+        ],
+        "subtitle": "Weepa cries angrily"
+    },
+    "entity.weepa.death": {
+        "sounds": [
+            {
+                "name": "gozarcraft:mob/weepa/weepa_death_1",
+                "volume": 0.8999999761581421
+            },
+            {
+                "name": "gozarcraft:mob/weepa/weepa_death_2",
+                "volume": 0.8999999761581421
+            }
+        ],
+        "subtitle": "Weepa dies"
+    },
+    "entity.weepa.hurt": {
+        "sounds": [
+            {
+                "name": "gozarcraft:mob/weepa/weepa_hurt_1",
+                "volume": 0.800000011920929
+            },
+            {
+                "name": "gozarcraft:mob/weepa/weepa_hurt_2",
+                "volume": 0.800000011920929
+            },
+            {
+                "name": "gozarcraft:mob/weepa/weepa_hurt_3",
+                "volume": 0.800000011920929
+            }
+        ],
+        "subtitle": "Weepa hurts"
+    },
+    "item.maraca.shake": {
+        "sounds": [
+            {
+                "name": "gozarcraft:item/maraca/maraca_shake",
+                "volume": 0.699999988079071
+            }
+        ],
+        "subtitle": "Maraca shakes"
+    },
+    "music_disc.adventure_awaits": {
+        "sounds": [
+            {
+                "name": "gozarcraft:music/nexus/adventure_awaits",
+                "volume": 0.11249999701976776,
+                "stream": true
+            }
+        ],
+        "subtitle": "Triumphant music plays"
+    },
+    "music_disc.an_answered_prayer": {
+        "sounds": [
+            {
+                "name": "gozarcraft:music/nexus/an_answered_prayer",
+                "volume": 0.11249999701976776,
+                "stream": true
+            }
+        ],
+        "subtitle": "Serene music plays"
+    },
+    "music_disc.pandemonium": {
+        "sounds": [
+            {
+                "name": "gozarcraft:music/nexus/pandemonium",
+                "volume": 0.11249999701976776,
+                "stream": true
+            }
+        ],
+        "subtitle": "Evocative music plays"
+    },
+    "music_disc.the_archmage": {
+        "sounds": [
+            {
+                "name": "gozarcraft:music/nexus/the_archmage",
+                "volume": 0.11249999701976776,
+                "stream": true
+            }
+        ],
+        "subtitle": "Mystical music plays"
+    },
+    "music_disc.the_fish_wont_die": {
+        "sounds": [
+            {
+                "name": "gozarcraft:music/the_fish_wont_die",
+                "volume": 0.11249999701976776,
+                "stream": true
+            }
+        ],
+        "subtitle": "Silly music plays"
+    },
+    "music_disc.the_mystery_of_the_nexus": {
+        "sounds": [
+            {
+                "name": "gozarcraft:music/nexus/the_mystery_of_the_nexus",
+                "volume": 0.07874999940395355,
+                "stream": true
+            }
+        ],
+        "subtitle": "Ethereal music plays"
+    },
+    "music_disc.the_rise_of_tiamat": {
+        "sounds": [
+            {
+                "name": "gozarcraft:music/the_rise_of_tiamat",
+                "volume": 0.11249999701976776,
+                "stream": true
+            }
+        ],
+        "subtitle": "Dramatic music plays"
+    },
+    "music.credits": {
+        "replace": true,
+        "sounds": [
+            {
+                "name": "gozarcraft:music/nexus/pandemonium",
+                "volume": 0.11249999701976776
+            }
+        ],
+        "subtitle": "Credits music plays"
+    },
+    "music.dragon": {
+        "sounds": [
+            {
+                "name": "gozarcraft:music/the_rise_of_tiamat",
+                "volume": 0.11249999701976776
+            }
+        ],
+        "subtitle": "Boss music plays"
+    },
+    "music.game": {
+        "sounds": [
+            {
+                "name": "gozarcraft:music/nexus/an_answered_prayer",
+                "volume": 0.11249999701976776
+            },
+            {
+                "name": "gozarcraft:music/nexus/the_archmage",
+                "volume": 0.11249999701976776
+            }
+        ],
+        "subtitle": "Music plays"
+    },
+    "music.menu": {
+        "replace": true,
+        "sounds": [
+            {
+                "name": "gozarcraft:music/nexus/adventure_awaits",
+                "volume": 0.11249999701976776
+            }
+        ],
+        "subtitle": "Menu music plays"
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/end_crystal"
+        },
+        "entries": [
+            {
+                "threshold": 500,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/nexus/artifacts/skull_island_item"
+                }
+            },
+            {
+                "threshold": 501,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/nexus/artifacts/lava_jail_item"
+                }
+            },
+            {
+                "threshold": 502,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/nexus/artifacts/ruins_item"
+                }
+            },
+            {
+                "threshold": 504,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/nexus/artifacts/battlefield_item"
+                }
+            },
+            {
+                "threshold": 505,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/nexus/artifacts/tower_item"
+                }
+            },
+            {
+                "threshold": 506,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/nexus/artifacts/ice_palace_item"
+                }
+            },
+            {
+                "threshold": 507,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/nexus/artifacts/tree_item"
+                }
+            },
+            {
+                "threshold": 508,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/nexus/artifacts/city_of_gold_item"
+                }
+            },
+            {
+                "threshold": 509,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/nexus/artifacts/shipwreck_item"
+                }
+            },
+            {
+                "threshold": 510,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/nexus/artifacts/temple_item"
+                }
+            },
+            {
+                "threshold": 510,
+                "model": {
+                    "type": "model",
+                    "model": "gozarcraft:item/nexus/artifacts/nether_jail_item"
+                }
+            }
+        ]
+    }
+}
