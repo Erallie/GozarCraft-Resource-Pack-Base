@@ -1,1 +1,7 @@
-{"parent":"item/generated","textures":{"layer0":"gozarcraft:item/craftable/weepa_elixir_overlay","layer1":"gozarcraft:item/craftable/weepa_elixir"}}
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "gozarcraft:item/craftable/weepa_elixir_overlay",
+        "layer1": "gozarcraft:item/craftable/weepa_elixir"
+    }
+}
