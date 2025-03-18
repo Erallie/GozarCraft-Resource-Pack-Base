@@ -181,70 +181,77 @@
         "subtitle": "Maraca shakes"
     },
     "music_disc.adventure_awaits": {
+        "replace": true,
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/adventure_awaits",
-                "volume": 0.11249999701976776,
+                "volume": 0.22499999404,
                 "stream": true
             }
         ],
         "subtitle": "Triumphant music plays"
     },
     "music_disc.an_answered_prayer": {
+        "replace": true,
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/an_answered_prayer",
-                "volume": 0.11249999701976776,
+                "volume": 0.22499999404,
                 "stream": true
             }
         ],
         "subtitle": "Serene music plays"
     },
     "music_disc.pandemonium": {
+        "replace": true,
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/pandemonium",
-                "volume": 0.11249999701976776,
+                "volume": 0.22499999404,
                 "stream": true
             }
         ],
         "subtitle": "Evocative music plays"
     },
     "music_disc.the_archmage": {
+        "replace": true,
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/the_archmage",
-                "volume": 0.11249999701976776,
+                "volume": 0.22499999404,
                 "stream": true
             }
         ],
         "subtitle": "Mystical music plays"
     },
     "music_disc.the_fish_wont_die": {
+        "replace": true,
         "sounds": [
             {
                 "name": "gozarcraft:music/the_fish_wont_die",
-                "volume": 0.11249999701976776,
+                "volume": 0.22499999404,
                 "stream": true
             }
         ],
         "subtitle": "Silly music plays"
     },
     "music_disc.the_mystery_of_the_nexus": {
+        "replace": true,
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/the_mystery_of_the_nexus",
-                "volume": 0.07874999940395355,
+                "volume": 0.1574999988,
                 "stream": true
             }
         ],
         "subtitle": "Ethereal music plays"
     },
     "music_disc.the_rise_of_tiamat": {
+        "replace": true,
         "sounds": [
             {
                 "name": "gozarcraft:music/the_rise_of_tiamat",
-                "volume": 0.11249999701976776,
+                "volume": 0.22499999404,
                 "stream": true
             }
         ],
@@ -255,29 +262,31 @@
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/pandemonium",
-                "volume": 0.11249999701976776
+                "volume": 0.22499999404
             }
         ],
         "subtitle": "Credits music plays"
     },
     "music.dragon": {
+        "replace": true,
         "sounds": [
             {
                 "name": "gozarcraft:music/the_rise_of_tiamat",
-                "volume": 0.11249999701976776
+                "volume": 0.22499999404
             }
         ],
         "subtitle": "Boss music plays"
     },
     "music.game": {
+        "replace": true,
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/an_answered_prayer",
-                "volume": 0.11249999701976776
+                "volume": 0.22499999404
             },
             {
                 "name": "gozarcraft:music/nexus/the_archmage",
-                "volume": 0.11249999701976776
+                "volume": 0.22499999404
             }
         ],
         "subtitle": "Music plays"
@@ -287,7 +296,7 @@
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/adventure_awaits",
-                "volume": 0.11249999701976776
+                "volume": 0.22499999404
             }
         ],
         "subtitle": "Menu music plays"
