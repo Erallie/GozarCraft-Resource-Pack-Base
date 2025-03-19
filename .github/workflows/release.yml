@@ -1,4 +1,4 @@
-name: Zip and Upload on Push
+name: Create Release on Push
 
 on:
   push:
@@ -15,11 +15,24 @@ jobs:
 
       - name: Zip contents
         run: |
-          # Create a zip file excluding specific directories
-          zip -r release.zip . -x ".github/*" ".gitattributes"
+          # Create a zip file excluding specific directories and files
+          zip -r gozarcraft-resourcepack-base.zip . -x ".github/*" ".gitattributes"
 
-      - name: Upload as Artifact
-        uses: actions/upload-artifact@v2
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
         with:
-          name: release-zip
-          path: gozarcraft-resourcepack-base.zip
+          tag_name: v1.0.${{ github.run_number }}  # Use the commit SHA as the tag
+          name: Release v1.0.${{ github.run_number }}  # Name of the release
+          body: |
+            This release includes the latest changes.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Release Asset
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.sha }}  # Use the same tag as the release
+          files: gozarcraft-resourcepack-base.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
