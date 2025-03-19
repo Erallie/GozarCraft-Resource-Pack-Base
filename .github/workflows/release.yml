@@ -16,13 +16,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Create releases directory
-        run: New-Item -ItemType Directory -Path releases -Force  # Create the releases directory
+      - name: Create temporary directory
+        run: New-Item -ItemType Directory -Path temp -Force  # Create a temporary directory
+
+      - name: Copy files to temporary directory
+        run: |
+          # Copy all files except the excluded ones to the temporary directory
+          Copy-Item -Path * -Destination temp -Recurse -Force -Exclude ".github", ".gitattributes". "releases/*"
 
       - name: Zip contents
         run: |
-          # Create a zip file excluding specific directories and files
-          Compress-Archive -Path * -DestinationPath releases/gozarcraft-resourcepack-base.zip -CompressionLevel Optimal -Force -Exclude ".github/*", ".gitattributes", "releases/*"
+          # Create a zip file from the temporary directory
+          Compress-Archive -Path temp\* -DestinationPath releases\gozarcraft-resourcepack-base.zip -CompressionLevel Optimal -Force
 
       - name: Create Release
         id: create_release
