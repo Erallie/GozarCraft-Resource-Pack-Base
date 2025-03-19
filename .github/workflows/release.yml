@@ -13,12 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run Tests (Optional)
-        run: |
-          # Add your test commands here
-          echo "Running tests..."
-          # Example: npm test or pytest
-
       - name: Zip contents
         run: |
           # Create a zip file excluding specific directories
