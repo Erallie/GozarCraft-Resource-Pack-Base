@@ -27,8 +27,18 @@ jobs:
 
       - name: Copy files to temporary directory
         run: |
-          # Use robocopy to copy files while excluding specific directories
-          robocopy . temp /E /XD .github releases temp /XF .gitattributes /IS
+          # Copy all files and subdirectories except the excluded ones to the temporary directory
+          Get-ChildItem -Path * -Recurse | 
+          Where-Object { 
+              $_.FullName -notlike "\.github*" -and 
+              $_.FullName -notlike "\.gitattributes*" -and 
+              $_.FullName -notlike "releases*" -and 
+              $_.FullName -notlike "temp*"
+          } | 
+          ForEach-Object {
+              $destinationPath = $_.FullName -replace [regex]::Escape((Get-Location).Path), "temp"
+              Copy-Item -Path $_.FullName -Destination $destinationPath -Force
+          }
 
       - name: Zip contents
         run: |
