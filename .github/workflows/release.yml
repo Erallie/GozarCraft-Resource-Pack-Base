@@ -19,11 +19,11 @@ jobs:
       - name: Create releases directory
         run: New-Item -ItemType Directory -Path releases -Force  # Create the releases directory
 
-      - name: Create temporary directory
-        run: New-Item -ItemType Directory -Path temp -Force  # Create a temporary directory
-
-      - name: Clear temporary directory
-        run: Remove-Item -Path temp\* -Recurse -Force -ErrorAction SilentlyContinue  # Clear any existing files
+      - name: Clear and create temporary directory
+        run: |
+          # Remove the temp directory if it exists and create a new one
+          Remove-Item -Path temp -Recurse -Force -ErrorAction SilentlyContinue
+          New-Item -ItemType Directory -Path temp -Force  # Create a temporary directory
 
       - name: Copy files to temporary directory
         run: |
