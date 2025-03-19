@@ -30,9 +30,10 @@ jobs:
           # Copy all files and subdirectories except the excluded ones to the temporary directory
           Get-ChildItem -Path * -Recurse | 
           Where-Object { 
-              $_.FullName -notlike "*\.github*" -and 
-              $_.FullName -notlike "*\.gitattributes*" -and 
-              $_.FullName -notlike "*releases*" 
+              $_.FullName -notlike "\.github*" -and 
+              $_.FullName -notlike "\.gitattributes*" -and 
+              $_.FullName -notlike "releases*" -and 
+              $_.FullName -notlike "temp*"
           } | 
           ForEach-Object {
               $destinationPath = $_.FullName -replace [regex]::Escape((Get-Location).Path), "temp"
