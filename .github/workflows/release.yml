@@ -22,7 +22,7 @@ jobs:
       - name: Copy files to temporary directory
         run: |
           # Copy all files except the excluded ones to the temporary directory
-          Copy-Item -Path * -Destination temp -Recurse -Force -Exclude ".github", ".gitattributes", "releases/*"
+          Get-ChildItem -Path * -Exclude ".github", ".gitattributes", "releases" | Copy-Item -Destination temp -Recurse -Force
 
       - name: Zip contents
         run: |
