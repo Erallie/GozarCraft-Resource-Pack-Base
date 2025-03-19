@@ -28,7 +28,7 @@ jobs:
       - name: Copy files to temporary directory
         run: |
           # Use robocopy to copy files while excluding specific directories
-          robocopy . temp /E /XD .github releases temp /XF .gitattributes
+          robocopy . temp /E /XD .github releases temp /XF .gitattributes /IS
 
       - name: Zip contents
         run: |
