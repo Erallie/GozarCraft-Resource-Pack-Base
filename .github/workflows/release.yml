@@ -16,6 +16,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Create releases directory
+        run: New-Item -ItemType Directory -Path releases -Force  # Create the releases directory
+
       - name: Create temporary directory
         run: New-Item -ItemType Directory -Path temp -Force  # Create a temporary directory
 
