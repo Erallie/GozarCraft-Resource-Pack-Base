@@ -1,0 +1,31 @@
+name: Zip and Upload on Push
+
+on:
+  push:
+    branches:
+      - main  # Change this to your default branch if necessary
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Tests (Optional)
+        run: |
+          # Add your test commands here
+          echo "Running tests..."
+          # Example: npm test or pytest
+
+      - name: Zip contents
+        run: |
+          # Create a zip file excluding specific directories
+          zip -r release.zip . -x ".github/*" ".gitattributes"
+
+      - name: Upload as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: release-zip
+          path: release.zip
