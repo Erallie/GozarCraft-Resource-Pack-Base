@@ -27,14 +27,13 @@ jobs:
 
       - name: Copy files to temporary directory
         run: |
-          # Copy all files except the excluded ones to the temporary directory
+          # Copy all files and subdirectories except the excluded ones to the temporary directory
           Get-ChildItem -Path * -Exclude ".github", ".gitattributes", "releases" | 
-          Where-Object { $_.PSIsContainer -eq $false } | 
           Copy-Item -Destination temp -Recurse -Force
 
       - name: Zip contents
         run: |
-          # Create a zip file from the temporary directory
+          # Create a zip file from the temporary directory, including subdirectories
           Compress-Archive -Path temp\* -DestinationPath releases\gozarcraft-resourcepack-base.zip -CompressionLevel Optimal -Force
 
       - name: Create Release
