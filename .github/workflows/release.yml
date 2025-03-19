@@ -32,7 +32,8 @@ jobs:
           Where-Object { 
               $_.FullName -notlike "*\.github*" -and 
               $_.FullName -notlike "*\.gitattributes*" -and 
-              $_.FullName -notlike "*releases*" 
+              $_.FullName -notlike "*releases*" -and
+              $_.FullName -notlike "*temp*"  # Exclude the temp directory
           } | 
           Copy-Item -Destination temp -Recurse -Force
 
