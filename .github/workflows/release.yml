@@ -19,7 +19,7 @@ jobs:
       - name: Zip contents
         run: |
           # Create a zip file excluding specific directories and files
-          zip -r gozarcraft-resourcepack-base.zip . -x ".github/*" ".gitattributes"
+          zip -r releases/gozarcraft-resourcepack-base.zip . -x ".github/*" ".gitattributes" "releases/"
 
       - name: Create Release
         id: create_release
@@ -36,6 +36,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.run_number }}  # Use the same tag as the release
-          files: gozarcraft-resourcepack-base.zip
+          files: releases/gozarcraft-resourcepack-base.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
