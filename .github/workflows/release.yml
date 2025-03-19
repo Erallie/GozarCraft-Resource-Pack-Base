@@ -10,22 +10,25 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest  # Use Windows runner
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Create releases directory
+        run: New-Item -ItemType Directory -Path releases -Force  # Create the releases directory
+
       - name: Zip contents
         run: |
           # Create a zip file excluding specific directories and files
-          zip -r releases/gozarcraft-resourcepack-base.zip . -x ".github/*" ".gitattributes" "releases/"
+          Compress-Archive -Path * -DestinationPath releases/gozarcraft-resourcepack-base.zip -CompressionLevel Optimal -Force -Exclude ".github/*", ".gitattributes", "releases/*"
 
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v1.0.${{ github.run_number }}  # Use the commit SHA as the tag
+          tag_name: v1.0.${{ github.run_number }}  # Use the run number as the tag
           name: Release v1.0.${{ github.run_number }}  # Name of the release
           body: |
             This release includes the latest changes.
@@ -35,7 +38,7 @@ jobs:
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.run_number }}  # Use the same tag as the release
-          files: releases/gozarcraft-resourcepack-base.zip
+          tag_name: v1.0.${{ github.run_number }}  # Use the same tag as the release
+          files: releases/gozarcraft-resourcepack-base.zip  # Path to the zip file in the releases directory
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
