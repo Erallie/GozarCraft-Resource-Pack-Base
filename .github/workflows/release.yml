@@ -19,10 +19,15 @@ jobs:
       - name: Create temporary directory
         run: New-Item -ItemType Directory -Path temp -Force  # Create a temporary directory
 
+      - name: Clear temporary directory
+        run: Remove-Item -Path temp\* -Recurse -Force -ErrorAction SilentlyContinue  # Clear any existing files
+
       - name: Copy files to temporary directory
         run: |
           # Copy all files except the excluded ones to the temporary directory
-          Get-ChildItem -Path * -Exclude ".github", ".gitattributes", "releases" | Copy-Item -Destination temp -Recurse -Force
+          Get-ChildItem -Path * -Exclude ".github", ".gitattributes", "releases" | 
+          Where-Object { $_.PSIsContainer -eq $false } | 
+          Copy-Item -Destination temp -Recurse -Force
 
       - name: Zip contents
         run: |
