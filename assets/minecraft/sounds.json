@@ -185,7 +185,7 @@
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/adventure_awaits",
-                "volume": 0.22499999404,
+                "volume": 0.44999998808,
                 "stream": true
             }
         ],
@@ -196,7 +196,7 @@
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/an_answered_prayer",
-                "volume": 0.22499999404,
+                "volume": 0.44999998808,
                 "stream": true
             }
         ],
@@ -207,7 +207,7 @@
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/pandemonium",
-                "volume": 0.22499999404,
+                "volume": 0.44999998808,
                 "stream": true
             }
         ],
@@ -218,7 +218,7 @@
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/the_archmage",
-                "volume": 0.22499999404,
+                "volume": 0.44999998808,
                 "stream": true
             }
         ],
@@ -229,7 +229,7 @@
         "sounds": [
             {
                 "name": "gozarcraft:music/the_fish_wont_die",
-                "volume": 0.22499999404,
+                "volume": 0.44999998808,
                 "stream": true
             }
         ],
@@ -240,7 +240,7 @@
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/the_mystery_of_the_nexus",
-                "volume": 0.1574999988,
+                "volume": 0.3149999976,
                 "stream": true
             }
         ],
@@ -251,7 +251,7 @@
         "sounds": [
             {
                 "name": "gozarcraft:music/the_rise_of_tiamat",
-                "volume": 0.22499999404,
+                "volume": 0.44999998808,
                 "stream": true
             }
         ],
@@ -262,7 +262,7 @@
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/pandemonium",
-                "volume": 0.22499999404
+                "volume": 0.44999998808
             }
         ],
         "subtitle": "Credits music plays"
@@ -272,7 +272,7 @@
         "sounds": [
             {
                 "name": "gozarcraft:music/the_rise_of_tiamat",
-                "volume": 0.22499999404
+                "volume": 0.44999998808
             }
         ],
         "subtitle": "Boss music plays"
@@ -282,11 +282,11 @@
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/an_answered_prayer",
-                "volume": 0.22499999404
+                "volume": 0.44999998808
             },
             {
                 "name": "gozarcraft:music/nexus/the_archmage",
-                "volume": 0.22499999404
+                "volume": 0.44999998808
             }
         ],
         "subtitle": "Music plays"
@@ -296,7 +296,7 @@
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/adventure_awaits",
-                "volume": 0.22499999404
+                "volume": 0.44999998808
             }
         ],
         "subtitle": "Menu music plays"
