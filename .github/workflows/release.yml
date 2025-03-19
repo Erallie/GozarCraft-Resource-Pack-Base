@@ -30,10 +30,10 @@ jobs:
           # Use Get-ChildItem to get all files and directories, excluding specified ones
           $itemsToZip = Get-ChildItem -Path * -Recurse | 
           Where-Object { 
-              $_.FullName -notlike "\.github*" -and 
-              $_.FullName -notlike "\.gitattributes*" -and 
-              $_.FullName -notlike "releases*" -and 
-              $_.FullName -notlike "temp*"  # Exclude the temp directory
+              $_.FullName -notlike "*\.github*" -and 
+              $_.FullName -notlike "*\.gitattributes*" -and 
+              $_.FullName -notlike "*releases*" -and 
+              $_.FullName -notlike "*temp*"  # Exclude the temp directory
           }
 
           # Create a zip file from the filtered items
@@ -43,7 +43,7 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v1.0.${{ github.run_number }}  # Use the run number as the tag testing
+          tag_name: v1.0.${{ github.run_number }}  # Use the run number as the tag
           name: Release v1.0.${{ github.run_number }}  # Name of the release
           body: |
             This release includes the latest changes.
