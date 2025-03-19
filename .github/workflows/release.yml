@@ -43,7 +43,7 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v1.0.${{ github.run_number }}  # Use the run number as the tag
+          tag_name: v1.0.${{ github.run_number }}  # Use the run number as the tag testing
           name: Release v1.0.${{ github.run_number }}  # Name of the release
           body: |
             This release includes the latest changes.
