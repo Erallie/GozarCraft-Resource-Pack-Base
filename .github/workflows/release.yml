@@ -27,23 +27,17 @@ jobs:
 
       - name: Copy files to temporary directory
         run: |
-          # Copy all files and subdirectories except the excluded ones to the temporary directory
-          Get-ChildItem -Path * -Recurse | 
+          # Use Get-ChildItem to get all files and directories, excluding specified ones
+          $itemsToZip = Get-ChildItem -Path * -Recurse | 
           Where-Object { 
               $_.FullName -notlike "\.github*" -and 
               $_.FullName -notlike "\.gitattributes*" -and 
               $_.FullName -notlike "releases*" -and 
-              $_.FullName -notlike "temp*"
-          } | 
-          ForEach-Object {
-              $destinationPath = $_.FullName -replace [regex]::Escape((Get-Location).Path), "temp"
-              Copy-Item -Path $_.FullName -Destination $destinationPath -Force
+              $_.FullName -notlike "temp*"  # Exclude the temp directory
           }
 
-      - name: Zip contents
-        run: |
-          # Create a zip file from the temporary directory, including subdirectories
-          Compress-Archive -Path temp\* -DestinationPath releases\gozarcraft-resourcepack-base.zip -CompressionLevel Optimal -Force
+          # Create a zip file from the filtered items
+          Compress-Archive -Path $itemsToZip.FullName -DestinationPath releases\gozarcraft-resourcepack-base.zip -CompressionLevel Optimal -Force
 
       - name: Create Release
         id: create_release
