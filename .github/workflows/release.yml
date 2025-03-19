@@ -35,7 +35,7 @@ jobs:
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.sha }}  # Use the same tag as the release
+          tag_name: ${{ github.run_number }}  # Use the same tag as the release
           files: gozarcraft-resourcepack-base.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
