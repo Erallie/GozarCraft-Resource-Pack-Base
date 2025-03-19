@@ -28,7 +28,12 @@ jobs:
       - name: Copy files to temporary directory
         run: |
           # Copy all files and subdirectories except the excluded ones to the temporary directory
-          Get-ChildItem -Path * -Exclude ".github", ".gitattributes", "releases" | 
+          Get-ChildItem -Path * -Recurse | 
+          Where-Object { 
+              $_.FullName -notlike "*\.github*" -and 
+              $_.FullName -notlike "*\.gitattributes*" -and 
+              $_.FullName -notlike "*releases*" 
+          } | 
           Copy-Item -Destination temp -Recurse -Force
 
       - name: Zip contents
