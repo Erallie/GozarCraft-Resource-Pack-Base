@@ -29,7 +29,7 @@
         ],
         "subtitle": "Wind droning"
     },
-    "entity.gorgon.ambient": {
+    "entity.baby_gorgon.ambient": {
         "sounds": [
             {
                 "name": "gozarcraft:mob/gorgon/gorgon_rattle_1",
@@ -40,9 +40,9 @@
                 "volume": 0.5
             }
         ],
-        "subtitle": "Gorgon rattles"
+        "subtitle": "Baby gorgon rattles"
     },
-    "entity.gorgon.attack": {
+    "entity.baby_gorgon.attack": {
         "sounds": [
             {
                 "name": "gozarcraft:mob/gorgon/gorgon_attack_1",
@@ -57,9 +57,9 @@
                 "volume": 0.6000000238418579
             }
         ],
-        "subtitle": "Gorgon bites"
+        "subtitle": "Baby gorgon bites"
     },
-    "entity.gorgon.death": {
+    "entity.baby_gorgon.death": {
         "sounds": [
             {
                 "name": "gozarcraft:mob/gorgon/gorgon_death_1",
@@ -80,7 +80,7 @@
         ],
         "subtitle": "Baby gorgon dies"
     },
-    "entity.gorgon.hurt": {
+    "entity.baby_gorgon.hurt": {
         "sounds": [
             {
                 "name": "gozarcraft:mob/gorgon/gorgon_hurt_1",
@@ -95,9 +95,9 @@
                 "volume": 0.6000000238418579
             }
         ],
-        "subtitle": "Gorgon hurts"
+        "subtitle": "Baby gorgon hurts"
     },
-    "entity.gorgon.step": {
+    "entity.baby_gorgon.step": {
         "sounds": [
             "gozarcraft:mob/gorgon/gorgon_slither"
         ],
