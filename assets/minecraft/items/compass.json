@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/compass"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 500
+      },
+      "model": "gozarcraft:item/craftable/compass/golden_compass"
+    }
+  ]
+}
