@@ -47,9 +47,13 @@ jobs:
                     }
                 }
 
-                # Escape for GitHub output
-                $messages = $messages -replace '`', '`\`' -replace '\r?\n', '%0A'
-                echo "description=$messages" >> $env:GITHUB_OUTPUT
+                # Write raw multi-line string to a temporary file
+                Set-Content -Path commit_message.txt -Value $messages -Encoding UTF8
+
+                # Set output using file reference
+                echo "description<<EOF" >> $env:GITHUB_OUTPUT
+                Get-Content commit_message.txt | ForEach-Object { echo $_ } >> $env:GITHUB_OUTPUT
+                echo "EOF" >> $env:GITHUB_OUTPUT
 
           - name: Create Release
             id: create_release
