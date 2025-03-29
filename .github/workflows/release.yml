@@ -17,21 +17,30 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Create releases directory
-        run: New-Item -ItemType Directory -Path releases -Force  # Create the releases directory
+        run: New-Item -ItemType Directory -Path releases -Force
 
       - name: Create Zip File
         run: |
-          # Create a zip file including specific files and the assets directory itself
           Compress-Archive -Path jext.json, jext.nbs.json, pack.mcmeta, pack.png, assets -DestinationPath releases\gozarcraft-resourcepack-base.zip -CompressionLevel Optimal -Force
+
+      - name: Get latest commit info
+        id: commit_info
+        run: |
+          $summary = git log -1 --pretty=format:"%s"
+          $description = git log -1 --pretty=format:"%b"
+          # Escape newlines for GitHub Actions output
+          $description = $description -replace '`', '`\`' -replace '\r?\n', '%0A'
+          echo "summary=$summary" >> $env:GITHUB_OUTPUT
+          echo "description=$description" >> $env:GITHUB_OUTPUT
 
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v1.0.${{ github.run_number }}  # Use the run number as the tag
-          name: Release v1.0.${{ github.run_number }}  # Name of the release
-          body: |
-            This release includes the latest changes.
+          name: ${{ steps.commit_info.outputs.summary }}  # Name of the release
+          body: ${{ steps.commit_info.outputs.description }}
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
