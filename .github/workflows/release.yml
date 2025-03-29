@@ -1,69 +1,69 @@
 name: Create Release on Push
 
 on:
-  push:
-    branches:
-      - main  # Change this to your default branch if necessary
+    push:
+        branches:
+            - main  # Change this to your default branch if necessary
 
 permissions:
-  contents: write
+    contents: write
 
 jobs:
-  build:
-    runs-on: windows-latest  # Use Windows runner
+    build:
+        runs-on: windows-latest  # Use Windows runner
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
 
-      - name: Create releases directory
-        run: New-Item -ItemType Directory -Path releases -Force
+          - name: Create releases directory
+            run: New-Item -ItemType Directory -Path releases -Force
 
-      - name: Create Zip File
-        run: |
-          Compress-Archive -Path jext.json, jext.nbs.json, pack.mcmeta, pack.png, assets -DestinationPath releases\gozarcraft-resourcepack-base.zip -CompressionLevel Optimal -Force
+          - name: Create Zip File
+            run: |
+                Compress-Archive -Path jext.json, jext.nbs.json, pack.mcmeta, pack.png, assets -DestinationPath releases\gozarcraft-resourcepack-base.zip -CompressionLevel Optimal -Force
 
-      - name: Get all pushed commits
-        id: commit_info
-        shell: pwsh
-        run: |
-            $payload = Get-Content $env:GITHUB_EVENT_PATH | ConvertFrom-Json
-            $allCommits = $payload.commits
-            $messages = ""
+          - name: Get all pushed commits
+            id: commit_info
+            shell: pwsh
+            run: |
+                $payload = Get-Content $env:GITHUB_EVENT_PATH | ConvertFrom-Json
+                $allCommits = $payload.commits
+                $messages = ""
 
-            foreach ($commit in $allCommits) {
-                $lines = $commit.message -split "`n"
-                $summary = $lines[0]
-                $bodyLines = $lines[1..($lines.Length - 1)]
+                foreach ($commit in $allCommits) {
+                    $lines = $commit.message -split "`n"
+                    $summary = $lines[0]
+                    $bodyLines = $lines[1..($lines.Length - 1)]
 
-                $messages += "- **$summary**`n"
+                    $messages += "- **$summary**`n"
 
-                foreach ($line in $bodyLines) {
-                    $trimmed = $line.Trim()
-                    if ($trimmed) {
-                        $messages += "  - $trimmed`n"
+                    foreach ($line in $bodyLines) {
+                        $trimmed = $line.Trim()
+                        if ($trimmed) {
+                            $messages += "  - $trimmed`n"
+                        }
                     }
                 }
-            }
 
-            # Escape for GitHub output
-            $messages = $messages -replace '`', '`\`' -replace '\r?\n', '%0A'
-            echo "description=$messages" >> $env:GITHUB_OUTPUT
+                # Escape for GitHub output
+                $messages = $messages -replace '`', '`\`' -replace '\r?\n', '%0A'
+                echo "description=$messages" >> $env:GITHUB_OUTPUT
 
-      - name: Create Release
-        id: create_release
-        uses: softprops/action-gh-release@v1
-        with:
-            tag_name: v1.0.${{ github.run_number }}
-            name: Release v1.0.${{ github.run_number }}
-            body: ${{ steps.commit_info.outputs.description }}
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          - name: Create Release
+            id: create_release
+            uses: softprops/action-gh-release@v1
+            with:
+                tag_name: v1.0.${{ github.run_number }}
+                name: Release v1.0.${{ github.run_number }}
+                body: ${{ steps.commit_info.outputs.description }}
+            env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload Release Asset
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: v1.0.${{ github.run_number }}  # Use the same tag as the release
-          files: releases/gozarcraft-resourcepack-base.zip  # Path to the zip file in the releases directory
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          - name: Upload Release Asset
+            uses: softprops/action-gh-release@v1
+            with:
+                tag_name: v1.0.${{ github.run_number }}  # Use the same tag as the release
+                files: releases/gozarcraft-resourcepack-base.zip  # Path to the zip file in the releases directory
+            env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
