@@ -23,26 +23,42 @@ jobs:
         run: |
           Compress-Archive -Path jext.json, jext.nbs.json, pack.mcmeta, pack.png, assets -DestinationPath releases\gozarcraft-resourcepack-base.zip -CompressionLevel Optimal -Force
 
-      - name: Get latest commit info
+      - name: Get all pushed commits
         id: commit_info
+        shell: pwsh
         run: |
-          $summary = git log -1 --pretty=format:"%s"
-          $description = git log -1 --pretty=format:"%b"
-          # Escape newlines for GitHub Actions output
-          $description = $description -replace '`', '`\`' -replace '\r?\n', '%0A'
-          echo "summary=$summary" >> $env:GITHUB_OUTPUT
-          echo "description=$description" >> $env:GITHUB_OUTPUT
+            $payload = Get-Content $env:GITHUB_EVENT_PATH | ConvertFrom-Json
+            $allCommits = $payload.commits
+            $messages = ""
+
+            foreach ($commit in $allCommits) {
+                $lines = $commit.message -split "`n"
+                $summary = $lines[0]
+                $bodyLines = $lines[1..($lines.Length - 1)]
+
+                $messages += "- **$summary**`n"
+
+                foreach ($line in $bodyLines) {
+                    $trimmed = $line.Trim()
+                    if ($trimmed) {
+                        $messages += "  - $trimmed`n"
+                    }
+                }
+            }
+
+            # Escape for GitHub output
+            $messages = $messages -replace '`', '`\`' -replace '\r?\n', '%0A'
+            echo "description=$messages" >> $env:GITHUB_OUTPUT
 
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v1.0.${{ github.run_number }}  # Use the run number as the tag
-          name: ${{ steps.commit_info.outputs.summary }}  # Name of the release
-          body: ${{ steps.commit_info.outputs.description }}
-
+            tag_name: v1.0.${{ github.run_number }}
+            name: Release v1.0.${{ github.run_number }}
+            body: ${{ steps.commit_info.outputs.description }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v1
