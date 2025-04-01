@@ -278,18 +278,19 @@
         "subtitle": "Boss music plays"
     },
     "music.game": {
-        "replace": true,
-        "sounds": [
-            {
-                "name": "gozarcraft:music/nexus/an_answered_prayer",
-                "volume": 0.75
-            },
-            {
-                "name": "gozarcraft:music/nexus/the_archmage",
-                "volume": 0.75
-            }
-        ],
-        "subtitle": "Music plays"
+        "sounds": []
+    },
+    "music.creative": {
+        "sounds": []
+    },
+    "music.nether": {
+        "sounds": []
+    },
+    "music.end": {
+        "sounds": []
+    },
+    "music.under_water": {
+        "sounds": []
     },
     "music.menu": {
         "replace": true,
