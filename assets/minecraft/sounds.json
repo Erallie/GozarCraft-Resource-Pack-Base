@@ -262,7 +262,8 @@
         "sounds": [
             {
                 "name": "gozarcraft:music/nexus/pandemonium",
-                "volume": 0.75
+                "volume": 0.75,
+                "stream": true
             }
         ],
         "subtitle": "Credits music plays"
@@ -272,30 +273,51 @@
         "sounds": [
             {
                 "name": "gozarcraft:music/the_rise_of_tiamat",
-                "volume": 0.75
+                "volume": 0.75,
+                "stream": true
             }
         ],
         "subtitle": "Boss music plays"
     },
     "music.game": {
-        "replace": true,
-        "sounds": []
+        "sounds": [
+            {
+                "name": "silence",
+                "stream": true
+            }
+        ]
     },
     "music.creative": {
-        "replace": true,
-        "sounds": []
+        "sounds": [
+            {
+                "name": "silence",
+                "stream": true
+            }
+        ]
     },
     "music.nether": {
-        "replace": true,
-        "sounds": []
+        "sounds": [
+            {
+                "name": "silence",
+                "stream": true
+            }
+        ]
     },
     "music.end": {
-        "replace": true,
-        "sounds": []
+        "sounds": [
+            {
+                "name": "silence",
+                "stream": true
+            }
+        ]
     },
     "music.under_water": {
-        "replace": true,
-        "sounds": []
+        "sounds": [
+            {
+                "name": "silence",
+                "stream": true
+            }
+        ]
     },
     "music.menu": {
         "replace": true,
