@@ -278,18 +278,23 @@
         "subtitle": "Boss music plays"
     },
     "music.game": {
+        "replace": true,
         "sounds": []
     },
     "music.creative": {
+        "replace": true,
         "sounds": []
     },
     "music.nether": {
+        "replace": true,
         "sounds": []
     },
     "music.end": {
+        "replace": true,
         "sounds": []
     },
     "music.under_water": {
+        "replace": true,
         "sounds": []
     },
     "music.menu": {
